@@ -272,7 +272,35 @@ def check_line(q):
 #........................................
 
 
+femeli=['конарейка',{'молоток':'инструмент'},'мама','папа','дочка',[4,5,6,7],'суслик', 'бабушка', 10, 20, 'пес', 30, 'хомячек', 40, 'уж', 'уж',[1,2,3]]
+femeli_str=[]
+femeli_int=[]
+femeli_dict=[]
+femeli_list=[]
 
+def sorting():
+    '''Функция сортирует по типам
+    str-строка
+    int-числа
+    dict-словарь
+    list-список(массив)'''
+    for i in femeli:
+        if type(i)==str:
+            femeli_str.append(i)
+        elif type(i)==int:
+            femeli_int.append(i)
+        elif type(i)==dict:
+            femeli_dict.append(i)
+        elif type(i)==list:
+            femeli_list.append(i)
+
+    print(femeli)
+    print(femeli_str)
+    print(femeli_int)
+    print(femeli_dict)
+    return(femeli_list)
+
+#........................................
 
 
 
