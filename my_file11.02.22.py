@@ -302,7 +302,38 @@ def sorting():
 
 #........................................
 
+class dog:
+    'Создаем класс и прописываем в нутри данные'
+    
+    def __init__(self,name):
+        self.name=name
+        self.breed='Я English bulldog.'
+        self.color='бело рыжий'
+        print('Привет. Меня зовут,',self.name,'!.',self.breed,'. Мой окрас,',self.color)
+        
+    def weight(self,kg):
+        'Я покушал и уже вешу'
+        print(self.name,'покушал и уже весит',kg,'кг')
 
+    def food(self,pric):
+        'Люблю покушать'
+        print(self.name,'хорошо питается !. Моя еда стоит',pric,'у.е. за мешок')
+        
+    def time(self,clock):
+        'Время гулять'
+        print('Уже',clock,'часов. Мне пора гулять. Если не пойдем гулять, я вам написаю дома !.')
+        
+    def walk(self,clock,km):
+        'Гуляем'
+        print(self.name, 'любит гулять. Я гуляю уже',clock,'часа и протопал уже',km,'км.')
+        
+    def NewColor(self,newcolor):
+        newcolor='черный'
+        print('Я так здорово погулял ! Раньше у меня был окрас',self.color,',а теперь',newcolor,'!')
+        
+senya=dog('Сеня')
+
+#..............................................
 
 
     
