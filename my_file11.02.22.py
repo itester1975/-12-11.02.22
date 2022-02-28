@@ -362,4 +362,55 @@ manihka=cat('Маничка')
 
 #...............................................
     
+class menu:
+    '''Создаем сервис Mail'''
 
+    def __init__(self):
+        mn=['Главное меню:',['Регистрация:',['Логин:'],['Пароль:']],['Вход:'],['Написать:'],['Прочитать:'],['Отправить:'],['Просмотреть черновик:'],['Удалить:']]
+        user_office=[['Написать:'],['Прочитать:'],['Отправить:'],['Просмотреть черновик:'],['Удалить:'],['Выйти']] #личный кабинет
+        q={}
+        
+        self.q=q
+        self.mn=mn
+        self.user_office=user_office
+        self.registration=self.mn[1]
+        self.login=self.mn[1][1] #логин
+        self.password=self.mn[1][2] #пароль
+        self.entrance=self.mn[2] #вход
+        self.write=self.mn[3] #написать
+        self.read=self.mn[4] #прочитать
+        self.send=self.mn[5] #отправить
+        self.draft=self.mn[6] #черновик
+        self.delete=self.mn[7] #удалить
+        print('Сначало регистрация:','Ваш:',self.login,'Ваш:',self.password)
+        
+        
+    def us_registr(self,login,password):#регистрация
+        self.bdul=[] #База Данных пользователей для хранения логинов.
+        self.bdup=[] #База Данных пользователей для хранения паролей.
+        self.bdul.append(login)
+        self.bdup.append(password)
+        print('Ваш логин (',login,') и пароль (',password,') успешно зарегистрированы:',self.bdul,self.bdup,'.Войдите под своей учетной записью.')
+            
+    def us_entrance(self,login,password):#вход
+        for log in self.bdul:
+            if log==login:  
+                for pas in self.bdup:
+                    if pas==password:
+                        print('Вы вошли в личный кабинет:',self.user_office)
+        else:
+            print('Не верный логин или пароль')
+                
+    def us_write(self):#написать
+        for i in range(1):
+            a = input('Напишите сообщение:')
+            self.q[a] = {}
+            b = input('Мой телефон:')
+            self.q[a]['телефон'] = b
+            c = input('Мой Mail:')
+            self.q[a]['Mail'] = c
+            print('С уважением к вам. Ваш доктор Барменталь.')
+
+            
+       
+       
